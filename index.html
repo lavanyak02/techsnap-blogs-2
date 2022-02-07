@@ -1361,12 +1361,175 @@
 				</div>
 			</div>
 		</main>
-		
-		<button class="scroll-to-top fab" title="Scroll To Top">
+<div class="footer_MainBox">
+    <div class="Footer_page">
+        <footer class="Footer_conatiner">
+            <div class="Footer_header">
+                <a href="{% url 'index' %}"><img src="{% static 'assets/main/logo.png'%}" alt="Logo" /></a>
+                <br />
+                <p>
+                    We are here to endure your muddled stages of knowing the trends
+                    while pursuing UG-CSE.<br />we help you to know about trending
+                    jobs and required skills for achieving one particular
+                    designation
+                </p>
+                <br />
+                <p>
+                    We will succour you in submitting your university projects as
+                    well as steer you with free tutorials, online courses, live
+                    courses and career paths
+                </p>
+            </div>
+            <div class="Footer_columns_holder">
+                <div class="Footer_columns">
+                    <h1>Company</h1>
+                    <a href="{% url 'aboutus' %}">About us</a>
+                    <a href="{% url 'learnerstories' %}">Learner stories</a>
+                    <a href="{% url 'ourpeople' %}">our people</a>
+                    <a href="{% url 'job_test:jobslist' %}">jobs</a>
+                </div>
+                <div class="Footer_columns">
+                    <h1>Resources</h1>
+                    <a href="##">Tutorials</a>
+                    <a href="{% url 'careerpaths:careerslist' %}">Career paths</a>
+                    <a href="##">Courses</a>
+                    <a href="##">Blogs</a>
+                </div>
+                <div class="Footer_columns">
+                    <h1>Support</h1>
+                    <a href="{% url 'contact' %}">Contact us</a>
+                    <a href="{% url 'faq' %}">FAQ</a>
+                    <a href="##">Forum</a>
+                    <a href="##">Get Involved</a>
+                </div>
+                <div class="Footer_columns">
+                    <h1>Services</h1>
+                    <a href="##">Startup services</a>
+                    <a href="##">Design services</a>
+                    <a href="##">Mini Projects</a>
+                    <a href="##">Mock interviews</a>
+                </div>
+            </div>
+            <div class="join_our desktop">
+                <p>Join our newsletter</p>
+                <form
+                    class="input_holder"
+                    method="POST"
+                    action="{% url 'nextpage' %}"
+                >
+                    <input type="text" name="email" />
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </footer>
+        <div class="join_our responsive">
+            <p>Join our newsletter</p>
+            <form
+                class="input_holder"
+                method="POST"
+                action="{% url 'nextpage' %}"
+            >
+                <input type="text" name="email" />
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+        <div class="Privacy_holder">
+            <div class="Privacy_links">
+                <a href="{% url 'privacy' %}">Privacy policy</a>
+                <a href="{% url 'cookies' %}">Cookies Notice</a>
+                <a href="{% url 'security' %}">Security</a>
+                <a href="{% url 'terms' %}">Terms of use</a>
+            </div>
+            <div class="Social-media">
+                <div class="image_conatiner">
+                    <a href="https://www.linkedin.com/company/74741373/"
+                        ><img
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/768px-LinkedIn_logo_initials.png"
+                            id="link"
+                    /></a>
+
+                    <a href="{% url 'contact' %}"
+                        ><img
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/2560px-Gmail_icon_%282020%29.svg.png"
+                            id="link"
+                    /></a>
+
+                    <a
+                        href="https://trello.com/b/SMDt9NMY/techsnap-upcoming-releases"
+                        ><img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC-APsSZXqFUpTTg9qvGW6D5hERazjQfAMkM0Oz6b9sC3uIwU4-_fD8CatVhbAUG4hz3g&usqp=CAU"
+                            id="link"
+                    /></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyRight">
+        Made with 💗 in india © 2021 Techsnap Educations LLP. All Rights
+        Reserved.
+    </div>
+</div>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+<script>
+new Splide( '.splide', {
+	type   : 'loop',
+	autoplay: true,
+	pagination : false,
+	arrows     : false,
+	perPage    : 2,
+	perMove    : 1,
+	focus  : 'center',
+	autoplay: true,
+	gap    : '1rem',
+	breakpoints : {
+		'600': {
+	perPage : 1,
+	gap    : '1rem'
+		}
+	},
+} ).mount();
+</script>
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+		AOS.init({
+			duration: 900,
+			offset: 220,
+			easing: 'ease-in-out-quad',
+		});
+
+		const header = document.querySelector('.header');
+		const navLink = document.querySelectorAll('.nav_item');
+		const ham = document.querySelector('.ham');
+
+		window.addEventListener('scroll', () => {
+			const top = window.innerHeight * (15 / 100);
+			if (window.scrollY <= top) {
+				header.style.background = 'rgb(26, 25, 29)';
+				ham.style.background ="transparent";
+
+				header.style.height = '60px';
+				navLink.forEach((i) => {
+					i.style.color = '#fff';
+				});
+			}
+			if (window.scrollY > top) {
+				header.style.background = '#fff';
+				ham.style.background ="#0a33ec";
+				header.style.height = '60px';
+				navLink.forEach((i) => {
+					i.style.color = '#000';
+				});
+			}
+		});
+	</script>
+<button class="scroll-to-top fab" title="Scroll To Top">
 			<span class="material-icons"> expand_less </span>
-		</button>
-		<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
-		<script src="./app.js"></script>
-		<script src="./theme.js"></script>
-	</body>
+</button>
+<script src="nav-dropdown.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+<script src="./app.js"></script>
+<script src="./theme.js"></script>
 </html>
+
